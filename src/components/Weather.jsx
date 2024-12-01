@@ -1,3 +1,5 @@
-export default function Weather() {
-  return <div></div>;
-}
+const Weather = () => {
+  return <div className=""></div>;
+};
+
+export default Weather;

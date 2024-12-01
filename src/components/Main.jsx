@@ -1,11 +1,13 @@
 import Weather from "./Weather";
 import ForecastList from "./ForecastList";
 
-export default function Main() {
+const Main = () => {
   return (
-    <main>
+    <main className="">
       <Weather />
       <ForecastList />
     </main>
   );
-}
+};
+
+export default Main;

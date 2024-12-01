@@ -1,3 +1,5 @@
-export default function ForecastList() {
-  return <ul></ul>;
-}
+const ForecastList = () => {
+  return <ul className=""></ul>;
+};
+
+export default ForecastList;

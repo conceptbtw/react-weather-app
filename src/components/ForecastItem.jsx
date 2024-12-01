@@ -1,3 +1,5 @@
-export default function ForecastItem() {
-  return <li></li>;
-}
+const ForecastItem = () => {
+  return <li className=""></li>;
+};
+
+export default ForecastItem;
