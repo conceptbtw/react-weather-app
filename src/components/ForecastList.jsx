@@ -1,5 +1,11 @@
+import ForecastItem from "./ForecastItem";
+
 const ForecastList = () => {
-  return <ul className=""></ul>;
+  return (
+    <ul className="">
+      <ForecastItem />
+    </ul>
+  );
 };
 
 export default ForecastList;
