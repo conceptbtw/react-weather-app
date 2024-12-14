@@ -1,6 +1,6 @@
 const ForecastItem = () => {
   return (
-    <li className="p-4 flex flex-col justify-center items-center border">
+    <li className="p-4 flex flex-col justify-center items-center border rounded">
       <p className="">Monday</p>
       <img
         className=""

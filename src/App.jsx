@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="h-svh flex flex-col justify-center items-center">
+    <div className="h-svh flex flex-col justify-center items-center font-bold text-xl">
       <Header />
       <Main />
       <Footer />
