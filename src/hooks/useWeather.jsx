@@ -1,14 +1,40 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const useWeather = (city) => {
-  const [weatherData, setWeatherData] = useState();
-  const [weatherError, setWeatherError] = useState();
-  const [weatherLoading, setWeatherLoading] = useState();
+  const [weatherData, setWeatherData] = useState(null);
+  const [weatherError, setWeatherError] = useState(null);
+  const [weatherLoading, setWeatherLoading] = useState(false);
 
   const apiKey = "";
-  const apiUrl = "";
+  const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
-  useEffect(() => {}, [city]);
+  useEffect(() => {
+    const fetchData = async () => {
+      setWeatherLoading(true);
+      setWeatherError(null);
+
+      try {
+        const response = await axios.get(apiUrl, {
+          params: {
+            q: city,
+            appid: apiKey,
+            units: "metric",
+          },
+        });
+
+        setWeatherData(response.data);
+      } catch (error) {
+        setWeatherError(error);
+      } finally {
+        setWeatherLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [city]);
+
+  return { weatherData, weatherError, weatherLoading };
 };
 
 export default useWeather;
