@@ -6,8 +6,8 @@ const useForecast = (city) => {
   const [forecastError, setForecastError] = useState(null);
   const [forecastLoading, setForecastLoading] = useState(false);
 
-  const apiKey = "";
-  const apiUrl = "https://api.openweathermap.org/data/2.5/forecast";
+  const apiKey = import.meta.env.VITE_FORECAST_API_KEY;
+  const apiUrl = "https://api.openweathermap.org/data/2.5/forecast/daily";
 
   useEffect(() => {
     const fetchData = async () => {

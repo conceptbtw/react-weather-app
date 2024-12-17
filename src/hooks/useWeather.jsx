@@ -6,7 +6,7 @@ const useWeather = (city) => {
   const [weatherError, setWeatherError] = useState(null);
   const [weatherLoading, setWeatherLoading] = useState(false);
 
-  const apiKey = "";
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
   useEffect(() => {
