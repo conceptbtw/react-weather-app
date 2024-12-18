@@ -1,3 +1,6 @@
+import DataList from "./DataList";
+import DataItem from "./DataItem";
+
 const ForecastItem = () => {
   return (
     <li className="p-4 flex flex-col justify-center items-center border rounded">
@@ -7,32 +10,20 @@ const ForecastItem = () => {
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
         alt=""
       />
-      <ul className="">
-        <li className="flex justify-center items-center">
-          <img
-            className=""
-            src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thermometer-celsius.svg"
-            alt=""
-          />
-          <p className="">20°/10°</p>
-        </li>
-        <li className="flex justify-center items-center">
-          <img
-            className=""
-            src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/humidity.svg"
-            alt=""
-          />
-          <p className="">50 %</p>
-        </li>
-        <li className="flex justify-center items-center">
-          <img
-            className=""
-            src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg"
-            alt=""
-          />
-          <p className="">5 m/s</p>
-        </li>
-      </ul>
+      <DataList>
+        <DataItem
+          icon="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thermometer-celsius.svg"
+          data="20°/10°"
+        />
+        <DataItem
+          icon="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/humidity.svg"
+          data="50 %"
+        />
+        <DataItem
+          icon="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg"
+          data="5 m/s"
+        />
+      </DataList>
     </li>
   );
 };
