@@ -1,7 +1,7 @@
 const DataItem = ({ icon, data }) => {
   return (
-    <li className="flex justify-center items-center">
-      <img className="" src={icon} alt="Data icon" />
+    <li className="flex justify-between items-center border-b">
+      <img className="size-10" src={icon} alt="Data icon" />
       <p className="">{data}</p>
     </li>
   );

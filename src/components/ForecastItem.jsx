@@ -3,10 +3,10 @@ import DataItem from "./DataItem";
 
 const ForecastItem = () => {
   return (
-    <li className="p-4 flex flex-col justify-center items-center border rounded">
+    <li className="p-4 flex flex-1 flex-col justify-center items-center border rounded">
       <p className="">Monday</p>
       <img
-        className=""
+        className="max-w-32"
         src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
         alt=""
       />

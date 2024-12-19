@@ -9,6 +9,7 @@ const Search = () => {
       <button
         className="size-8 flex justify-center items-center border"
         type="submit"
+        aria-label="Search"
       >
         <i className="fa-solid fa-magnifying-glass"></i>
       </button>
