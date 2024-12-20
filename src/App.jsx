@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="min-h-svh flex flex-col justify-center items-center font-bold text-xl">
       <Header />
-      <Main />
+      <Main city="Lviv" />
       <Footer />
     </div>
   );
