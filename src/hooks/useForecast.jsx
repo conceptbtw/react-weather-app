@@ -20,6 +20,7 @@ const useForecast = (city) => {
             q: city,
             appid: apiKey,
             units: "metric",
+            cnt: 7,
           },
         });
 

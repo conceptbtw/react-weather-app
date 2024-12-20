@@ -1,15 +1,11 @@
 import ForecastItem from "./ForecastItem";
 
-const ForecastList = () => {
+const ForecastList = ({ forecastData }) => {
   return (
     <ul className="w-full flex flex-wrap justify-center items-center gap-1">
-      <ForecastItem />
-      <ForecastItem />
-      <ForecastItem />
-      <ForecastItem />
-      <ForecastItem />
-      <ForecastItem />
-      <ForecastItem />
+      {forecastData?.list?.map((forecastData, index) => (
+        <ForecastItem key={index} forecastData={forecastData} />
+      ))}
     </ul>
   );
 };
