@@ -1,5 +1,6 @@
 import DataList from "./DataList";
 import DataItem from "./DataItem";
+import useIcon from "../hooks/useIcon";
 
 const ForecastItem = ({ forecastData }) => {
   const {
@@ -12,19 +13,15 @@ const ForecastItem = ({ forecastData }) => {
 
   const day = new Date(dt * 1000).toLocaleDateString("en-GB", {
     weekday: "long",
-  });
-
-  const date = new Date(dt * 1000).toLocaleDateString("en-GB", {
     day: "2-digit",
     month: "2-digit",
   });
 
-  const forecastIcon =
-    "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg";
+  const forecastIcon = useIcon(description);
 
   return (
     <li className="p-4 flex flex-1 flex-col justify-center items-center border rounded">
-      <p className="">{`${day}, ${date}`}</p>
+      <p className="">{day}</p>
       <img className="max-w-32" src={forecastIcon} alt={description} />
       <DataList>
         <DataItem

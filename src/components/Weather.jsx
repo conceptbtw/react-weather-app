@@ -1,5 +1,6 @@
 import DataList from "./DataList";
 import DataItem from "./DataItem";
+import useIcon from "../hooks/useIcon";
 
 const Weather = ({ weatherData }) => {
   const {
@@ -10,8 +11,7 @@ const Weather = ({ weatherData }) => {
     name,
   } = weatherData;
 
-  const weatherIcon =
-    "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg";
+  const weatherIcon = useIcon(description);
 
   return (
     <div className="w-full p-4 flex justify-between items-center border rounded">
