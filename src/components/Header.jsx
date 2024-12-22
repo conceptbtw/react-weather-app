@@ -1,9 +1,9 @@
 import Search from "./Search";
 
-const Header = () => {
+const Header = ({ setCity }) => {
   return (
     <header className="w-full p-4 flex justify-center items-center border">
-      <Search />
+      <Search setCity={setCity} />
     </header>
   );
 };
