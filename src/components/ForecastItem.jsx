@@ -13,6 +13,9 @@ const ForecastItem = ({ forecastData }) => {
 
   const day = new Date(dt * 1000).toLocaleDateString("en-GB", {
     weekday: "long",
+  });
+
+  const date = new Date(dt * 1000).toLocaleDateString("en-GB", {
     day: "2-digit",
     month: "2-digit",
   });
@@ -20,9 +23,14 @@ const ForecastItem = ({ forecastData }) => {
   const forecastIcon = useIcon(description);
 
   return (
-    <li className="p-4 flex flex-1 flex-col justify-center items-center border rounded">
+    <li className="p-4 md:p-5 flex flex-1 flex-col justify-center items-center border border-white/10 rounded-xl bg-white/10 shadow backdrop-blur">
       <p className="">{day}</p>
-      <img className="max-w-32" src={forecastIcon} alt={description} />
+      <p className="">{date}</p>
+      <img
+        className="max-w-32 md:max-w-40"
+        src={forecastIcon}
+        alt={description}
+      />
       <DataList>
         <DataItem
           icon="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thermometer-celsius.svg"
