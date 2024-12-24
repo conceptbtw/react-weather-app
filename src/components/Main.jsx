@@ -7,22 +7,15 @@ const Main = ({ city }) => {
   const { weatherData, weatherError, weatherLoading } = useWeather(city);
   const { forecastData, forecastError, forecastLoading } = useForecast(city);
 
-  if (!weatherData && !forecastData) {
-    return <p>!weatherData and !forecastData</p>;
-  }
-
-  if (weatherError && forecastError) {
-    return <p>weatherError and forecastError</p>;
-  }
-
-  if (weatherLoading && forecastLoading) {
-    return <p>weatherLoading and forecastLoading</p>;
-  }
-
   return (
-    <main className="max-w-3xl w-full p-4 flex flex-1 flex-col justify-center items-center gap-1">
-      <Weather weatherData={weatherData} />
-      <ForecastList forecastData={forecastData} />
+    <main className="max-w-3xl w-full p-4 md:p-5 center flex-1 flex-col gap-1">
+      {!weatherData && !forecastData && <p>!weatherData and !forecastData</p>}
+      {weatherError && forecastError && <p>weatherError and forecastError</p>}
+      {weatherLoading && forecastLoading && (
+        <p>weatherLoading and forecastLoading</p>
+      )}
+      {weatherData && <Weather weatherData={weatherData} />}
+      {forecastData && <ForecastList forecastData={forecastData} />}
     </main>
   );
 };

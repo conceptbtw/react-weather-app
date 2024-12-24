@@ -13,18 +13,18 @@ const Search = ({ setCity }) => {
 
   return (
     <form
-      className="p-1 flex justify-center items-center gap-1 border border-white/10 rounded-full"
+      className="max-w-md w-full p-1 center gap-1 border border-white/10 rounded-full bg-white/10"
       onSubmit={handleSubmit}
     >
       <input
-        className="h-8 md:h-10 p-4 md:p-5 flex justify-center items-center rounded-full outline-none bg-transparent"
+        className="min-w-0 h-8 md:h-10 p-4 md:p-5 center flex-1 rounded-full outline-none placeholder-white/90 bg-transparent"
         type="text"
         placeholder="Lviv, UA"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
       <button
-        className="size-8 md:size-10 flex justify-center items-center rounded-full"
+        className="size-8 md:size-10 center rounded-full"
         type="submit"
         aria-label="Search"
       >

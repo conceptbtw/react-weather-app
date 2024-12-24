@@ -21,11 +21,12 @@ const ForecastItem = ({ forecastData }) => {
   });
 
   const forecastIcon = useIcon(description);
+  const url = "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/";
 
   return (
-    <li className="p-4 md:p-5 flex flex-1 flex-col justify-center items-center border border-white/10 rounded-xl bg-white/10 shadow backdrop-blur">
+    <li className="p-4 md:p-5 center flex-1 flex-col border border-white/10 rounded-xl bg-white/10 shadow backdrop-blur">
       <p className="">{day}</p>
-      <p className="">{date}</p>
+      <p className="text-white/50">{date}</p>
       <img
         className="max-w-32 md:max-w-40"
         src={forecastIcon}
@@ -33,17 +34,11 @@ const ForecastItem = ({ forecastData }) => {
       />
       <DataList>
         <DataItem
-          icon="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thermometer-celsius.svg"
+          icon={`${url}thermometer-celsius.svg`}
           data={`${Math.round(max)}°/${Math.round(min)}°`}
         />
-        <DataItem
-          icon="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/humidity.svg"
-          data={`${humidity} %`}
-        />
-        <DataItem
-          icon="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg"
-          data={`${Math.round(speed)} m/s`}
-        />
+        <DataItem icon={`${url}humidity.svg`} data={`${humidity} %`} />
+        <DataItem icon={`${url}wind.svg`} data={`${Math.round(speed)} m/s`} />
       </DataList>
     </li>
   );

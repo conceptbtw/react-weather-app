@@ -2,7 +2,7 @@ import ForecastItem from "./ForecastItem";
 
 const ForecastList = ({ forecastData }) => {
   return (
-    <ul className="w-full flex flex-1 flex-wrap justify-center items-center gap-1">
+    <ul className="w-full center flex-1 flex-wrap gap-1">
       {forecastData?.list?.map((forecastData, index) => (
         <ForecastItem key={index} forecastData={forecastData} />
       ))}
