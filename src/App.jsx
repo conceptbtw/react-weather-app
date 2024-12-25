@@ -7,7 +7,7 @@ const App = () => {
   const [city, setCity] = useState("Lviv, UA");
 
   return (
-    <div className="min-h-svh center flex-col text-center text-white/90 md:text-xl font-bold bg-[url('bg.svg')] bg-center bg-cover">
+    <div className="min-h-svh center flex-col text-center text-white/90 md:text-xl font-bold bg-[url('/bg.svg')] bg-center bg-cover">
       <Header setCity={setCity} />
       <Main city={city} />
       <Footer />

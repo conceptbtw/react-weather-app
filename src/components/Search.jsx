@@ -13,7 +13,7 @@ const Search = ({ setCity }) => {
 
   return (
     <form
-      className="max-w-md w-full p-1 center gap-1 border border-white/10 rounded-full bg-white/10"
+      className="max-w-md w-full p-1 center gap-1 border border-white/10 rounded-full bg-white/10 shadow backdrop-blur"
       onSubmit={handleSubmit}
     >
       <input
