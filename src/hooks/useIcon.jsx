@@ -3,6 +3,7 @@ const useIcon = (description) => {
 
   switch (description.toLowerCase()) {
     case "clear sky":
+    case "sky is clear":
       return `${url}clear-day.svg`;
 
     case "few clouds":

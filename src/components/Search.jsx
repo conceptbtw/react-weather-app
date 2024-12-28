@@ -17,7 +17,7 @@ const Search = ({ setCity }) => {
       onSubmit={handleSubmit}
     >
       <input
-        className="min-w-0 h-8 md:h-10 p-4 md:p-5 center flex-1 rounded-full outline-none placeholder-white/90 bg-transparent"
+        className="min-w-0 h-8 md:h-10 p-4 md:p-5 center flex-1 rounded-full outline-none placeholder-white/50 bg-transparent"
         type="text"
         placeholder="Lviv, UA"
         value={inputValue}
