@@ -2,27 +2,17 @@
 
 ###
 
-<h2 align="left">⚛️ Frontend</h2>
+<h2>⚛️ Frontend</h2>
 
 ###
 
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=html" height="48" alt="html5 logo"  />
-  <img width="8" />
-  <img src="https://skillicons.dev/icons?i=css" height="48" alt="css3 logo"  />
-  <img width="8" />
-  <img src="https://skillicons.dev/icons?i=js" height="48" alt="javascript logo"  />
-  <img width="8" />
-  <img src="https://skillicons.dev/icons?i=react" height="48" alt="react logo"  />
-  <img width="8" />
-  <img src="https://skillicons.dev/icons?i=tailwind" height="48" alt="tailwindcss logo"  />
-  <img width="8" />
-  <img src="https://skillicons.dev/icons?i=vite" height="48" alt="vite logo"  />
+<div>
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,vite" height="48" alt="Frontend logos"  />
 </div>
 
 ###
 
-<h2 align="left">✍️ Author</h2>
+<h2>✍️ Author</h2>
 
 ###
 
@@ -30,7 +20,7 @@
 
 ###
 
-<h2 align="left">📝 License</h2>
+<h2>📝 License</h2>
 
 ###
 

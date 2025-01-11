@@ -13,10 +13,10 @@ const Main = ({ city }) => {
 
   if (weatherData && forecastData) {
     content = (
-      <>
+      <div className="center flex-col gap-1">
         <Weather weatherData={weatherData} />
         <ForecastList forecastData={forecastData} />
-      </>
+      </div>
     );
   }
 
@@ -29,9 +29,7 @@ const Main = ({ city }) => {
   }
 
   return (
-    <main className="max-w-3xl w-full p-4 md:p-5 center flex-1 flex-col gap-1">
-      {content}
-    </main>
+    <main className="max-w-3xl w-full p-4 md:p-5 center flex-1">{content}</main>
   );
 };
 
