@@ -27,7 +27,7 @@ const Weather = ({ weatherData }) => {
 
   return (
     <div className="w-full p-4 md:p-5 border border-white/10 rounded-xl bg-white/10 shadow backdrop-blur">
-      <div className="text-center">Today, {time}</div>
+      <p>Today, {time}</p>
       <div className="grid md:grid-cols-3 gap-1">
         <div className="center">
           <img

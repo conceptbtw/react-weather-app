@@ -1,7 +1,5 @@
 import Weather from "./Weather";
 import ForecastList from "./ForecastList";
-import Error from "./Error";
-import Loading from "./Loading";
 import useWeather from "../hooks/useWeather";
 import useForecast from "../hooks/useForecast";
 
@@ -9,27 +7,34 @@ const Main = ({ city }) => {
   const { weatherData, weatherError, weatherLoading } = useWeather(city);
   const { forecastData, forecastError, forecastLoading } = useForecast(city);
 
-  let content;
+  const mainStyles = "max-w-screen-lg w-full p-4 md:p-5 center flex-1";
 
-  if (weatherData && forecastData) {
-    content = (
-      <div className="center flex-col gap-1">
-        <Weather weatherData={weatherData} />
-        <ForecastList forecastData={forecastData} />
-      </div>
+  if (weatherLoading || forecastLoading) {
+    return (
+      <main className={mainStyles}>
+        <img className="size-32 md:size-40" src="/loading.svg" alt="Loading" />
+      </main>
     );
   }
 
   if (weatherError || forecastError || !weatherData || !forecastData) {
-    content = <Error />;
-  }
-
-  if (weatherLoading || forecastLoading) {
-    content = <Loading />;
+    return (
+      <main className={mainStyles}>
+        <div className="p-8 md:p-10 border border-red-500/50 rounded-xl bg-red-500/50 shadow backdrop-blur">
+          <p className="text-2xl">City not found</p>
+          <p className="text-white/50">Please try again</p>
+        </div>
+      </main>
+    );
   }
 
   return (
-    <main className="max-w-3xl w-full p-4 md:p-5 center flex-1">{content}</main>
+    <main className={mainStyles}>
+      <div className="center flex-col gap-1">
+        <Weather weatherData={weatherData} />
+        <ForecastList forecastData={forecastData} />
+      </div>
+    </main>
   );
 };
 

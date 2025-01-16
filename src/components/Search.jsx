@@ -24,7 +24,7 @@ const Search = ({ setCity }) => {
         onChange={(e) => setInputValue(e.target.value)}
       />
       <button
-        className="size-8 md:size-10 center rounded-full"
+        className="size-8 md:size-10 center"
         type="submit"
         aria-label="Search"
       >
