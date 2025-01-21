@@ -27,16 +27,9 @@ const ForecastItem = ({ forecastData }) => {
     <li className="p-4 md:p-5 center flex-1 flex-col border border-white/10 rounded-xl bg-white/10 shadow backdrop-blur">
       <p>{day}</p>
       <p className="text-white/50">{date}</p>
-      <img
-        className="max-w-32 md:max-w-40"
-        src={forecastIcon}
-        alt={description}
-      />
+      <img className="max-w-32 md:max-w-40" src={forecastIcon} alt={description} />
       <DataList>
-        <DataItem
-          icon={`${url}thermometer-celsius.svg`}
-          data={`${Math.round(max)}°/${Math.round(min)}°`}
-        />
+        <DataItem icon={`${url}thermometer-celsius.svg`} data={`${Math.round(max)}°/${Math.round(min)}°`} />
         <DataItem icon={`${url}humidity.svg`} data={`${humidity} %`} />
         <DataItem icon={`${url}wind.svg`} data={`${Math.round(speed)} m/s`} />
       </DataList>
